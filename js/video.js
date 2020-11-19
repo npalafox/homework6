@@ -61,3 +61,8 @@ document.querySelector("#mute").addEventListener("click", function() {
 	}
 
 });
+
+document.querySelector("#volumeSlider").addEventListener("click", function() {
+	
+	
+});
