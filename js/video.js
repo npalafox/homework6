@@ -1,5 +1,5 @@
 var video;
-var video;
+var volume;
 
 window.addEventListener("load", function() {
 	video = document.querySelector("#myVideo");
@@ -62,11 +62,11 @@ document.querySelector("#mute").addEventListener("click", function() {
 
 });
 
-document.querySelector("#volumeSlider").addEventListener("click", function() {
+document.querySelector("#volumeSlider").addEventListener("change", function() {
 	console.log("Volume Slider Changed");
-	video.volume = (this.value / 100);
+	video.volume = this.value / 100;
 	console.log(this.value);
-	volume.innerHtml = this.value + "%";
+	volume.innerHTML = this.value + "%";
 });
 
 document.querySelector("#old").addEventListener("click", function() {
