@@ -63,6 +63,18 @@ document.querySelector("#mute").addEventListener("click", function() {
 });
 
 document.querySelector("#volumeSlider").addEventListener("click", function() {
-	
-	
+	console.log("Volume Slider Changed");
+	video.volume = (this.value / 100);
+	console.log(this.value);
+	volume.innerHtml = this.value + "%";
+});
+
+document.querySelector("#old").addEventListener("click", function() {
+	console.log("Old Version");
+	video.classList.add("oldTime");
+});
+
+document.querySelector("#original").addEventListener("click", function() {
+	console.log("Original version");
+	video.classList.remove("oldTime");
 });
